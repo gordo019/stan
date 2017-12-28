@@ -6861,6 +6861,12 @@ a.text-dark:focus, a.text-dark:hover {
           flex: 0 0 100%;
   max-width: 100%; }
 
+.blog-post {
+  margin: 0;
+  padding: 6rem 0; }
+  .blog-post:nth-child(odd) {
+    background-color: #f8f9fa; }
+
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
@@ -6894,6 +6900,9 @@ a.text-dark:focus, a.text-dark:hover {
 
 .navbar-brand a {
   color: #fff; }
+
+.blog .site-header {
+  margin-bottom: 0; }
 
 /*--------------------------------------------------------------
 ## Footer
