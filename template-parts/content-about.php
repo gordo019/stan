@@ -18,7 +18,7 @@
 		<?php
 			the_content();
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stanleywp' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'strappress' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -30,7 +30,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'stanleywp' ),
+						esc_html__( 'Edit %s', 'strappress' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
