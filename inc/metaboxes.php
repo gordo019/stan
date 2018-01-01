@@ -40,6 +40,28 @@ function cmb2_strappress_metaboxes() {
 		'type'       => 'textarea',
 	) );
 	
+		/**
+	 * metabox for portfolio
+	 */
+	$cmb_portfolio = new_cmb2_box( array(
+		'id'            => 'portfolio_metabox',
+		'title'         => __( 'Images', 'strappress' ),
+		'object_types'  => array( 'portfolio', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // Keep the metabox closed by default
+	) );
+
+	// Images for portfolio
+	$cmb_portfolio->add_field( array(
+		'name'       => __( 'Images', 'strappress' ),
+		'desc'       => __( 'Upload images', 'strappress' ),
+		'id'         => $prefix . 'images',
+		'type'       => 'file_list',
+	) );
+	
 
 	// Add other metaboxes as needed
 }

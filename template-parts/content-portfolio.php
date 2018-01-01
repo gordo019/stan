@@ -6,20 +6,64 @@
  *
  * @package StanleyWP
  */
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-4'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="post-thumbnail">
-		    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-		        <?php the_post_thumbnail('full', array('class' => 'rounded')); ?>
-		    </a>
-		</div><!--  .post-thumbnail -->
-	<?php endif; ?>
+	<div class="container">
+		<div class="row justify-content-center text-center">
+			<div class="col-md-6">
 
-	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					<?php
+						the_content( sprintf(
+							/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'strappress' ), array( 'span' => array( 'class' => array() ) ) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						) );
+
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'strappress' ),
+							'after'  => '</div>',
+						) );
+					?>
+				</div><!-- .entry-content -->
+
+			</div><!--  .col-md-6 -->
+		</div><!--  .row -->
+
+
+		<div class="row justify-content-center text-center">
+			<div class="col-md-8">
+
+				<?php 
+					// Get the list of files
+					$files = get_post_meta( get_the_ID(), '_strappress_images', 1 );
+
+					// Loop through them and output an image
+					foreach ( (array) $files as $attachment_id => $attachment_url ) {
+						echo '<div class="mb-4">';
+						echo wp_get_attachment_image( $attachment_id, 'full' );
+						echo '</div>';
+					}
+				 ?>
+
+				  <?php echo get_the_term_list( get_the_ID(), 'portfolio_category', 'Type: ', ', ', ''); ?> 
+
+			</div><!--  .col-md-8 -->
+		</div><!--  .row -->
+
+
+		<footer class="entry-footer">
+			<?php strappress_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+
+			
+	</div><!--  .container -->
 
 </article><!-- #post-## -->
