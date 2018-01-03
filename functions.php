@@ -26,6 +26,9 @@ function strappress_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	
+	// Puts the header logo field into the customizer.
+	add_theme_support( 'custom-logo' );
 
 	/*
 	 * Let WordPress manage the document title.

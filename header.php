@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package StrapPress
+ * @package StanleyWP
  */
 
 ?><!DOCTYPE html>
@@ -23,9 +23,19 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
-	    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	    	<div class="container">
-			   <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+
+	    		<?php 
+
+	    		if ( has_custom_logo() ) {
+				    the_custom_logo();
+				} else { ?>
+				    <div class="navbar-brand mb-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				    
+				<?php } ?>
+
+
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
