@@ -6907,7 +6907,7 @@ a.text-dark:focus, a.text-dark:hover {
 /*--------------------------------------------------------------
 ## templates
 --------------------------------------------------------------*/
-.about {
+.banner {
   background-color: #e9ecef;
   padding: 3rem 0; }
 
@@ -7046,7 +7046,8 @@ a.text-dark:focus, a.text-dark:hover {
 .navbar-brand a {
   color: #fff; }
 
-.blog .site-header {
+.page-template-about .site-header,
+.page-template-home .site-header {
   margin-bottom: 0; }
 
 /*--------------------------------------------------------------

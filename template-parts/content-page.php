@@ -4,12 +4,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package StrapPress
+ * @package StanleyWP
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php the_post_thumbnail('full', array('class' => 'mb-3', 'class' => 'rounded-circle')); ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
