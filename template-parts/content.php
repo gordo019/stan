@@ -17,7 +17,8 @@
                 <?php echo get_the_author(); ?>
 				<?php if ( has_post_thumbnail() && is_single() ) : ?>
 					<div class="post-thumbnail">
-						<?php the_post_thumbnail('full', array('class' => 'rounded')); ?>
+<!-- 						<?php the_post_thumbnail('full', array('class' => 'rounded')); ?> -->
+ 							<?php the_post_thumbnail(); ?>
 					</div><!--  .post-thumbnail -->
 					<?php else : ?>
 						<div class="post-thumbnail">
