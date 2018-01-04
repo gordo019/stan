@@ -18,11 +18,12 @@ get_header(); ?>
 					<div class="row justify-content-center text-center">
 						<header class="page-header col-md-6">
 
-							<?php $project_title = get_theme_mod( 'project_title', 'Portfolios' ); ?>
+							<?php $portfolio_title = get_theme_mod( 'portfolio_title', 'Portfolios' ); ?>
 
-							<?php if( $project_title != '') : ?>
-								<h1><?php echo $project_title; ?></h1>
+							<?php if( $portfolio_title != '') : ?>
+								<h1><?php echo $portfolio_title; ?></h1>
 							<?php endif; ?>
+
 
 						</header><!-- .page-header -->
 					</div><!--  .row -->
