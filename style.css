@@ -7063,6 +7063,12 @@ h1, h2, h3, h4, h5, h6 {
   .blog .post:nth-child(odd) {
     background-color: #f8f9fa; }
 
+/* Author Avatar - Blog Post */
+.author-avatar span {
+  text-transform: uppercase;
+  color: #868e96;
+  font-size: .8rem; }
+
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
