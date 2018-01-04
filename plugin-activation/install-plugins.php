@@ -67,6 +67,11 @@ function strappress_register_required_plugins() {
 			'slug'      => 'cmb2',
 			'required'  => true,
 		),
+		array(
+			'name'      => 'Kirki',
+			'slug'      => 'kirki',
+			'required'  => true,
+		),
 
 
 

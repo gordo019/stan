@@ -16,3 +16,10 @@ function strappress_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'strappress_customize_register' );
+
+if ( class_exists('Kirki') ) {
+	Kirki::add_config( 'stanleywp_theme', array(
+		'capability'    => 'edit_theme_options',
+		'option_type'   => 'theme_mod',
+	) );
+}

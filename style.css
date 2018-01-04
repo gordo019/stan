@@ -6940,6 +6940,7 @@ a.text-dark:focus, a.text-dark:hover {
   .portfolio .post-thumbnail {
     background: #1abc9c; }
     .portfolio .post-thumbnail img {
+      height: 250px;
       opacity: 1;
       transition: .3s ease-in-out; }
       .portfolio .post-thumbnail img:hover {
