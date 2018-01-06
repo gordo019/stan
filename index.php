@@ -37,7 +37,7 @@ get_header(); ?>
 					endwhile; ?>
 					
 					<div class="container">
-						<div class="row justify-content-center mt-4 text-center">
+						<div class="row mt-4">
 							<div class="col-md-8">
 <!-- 								<?php the_posts_navigation(); ?> -->
 								<?php fellowtuts_wpbs4_pagination(); ?>
